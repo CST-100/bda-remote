@@ -2,28 +2,29 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="description" content="Human-designed AI-piloted aircraft combat in an ongoing ranked tournament format." />
-    <link rel="canonical" href="https://conquertheair.com/home" />
+    <meta name="description" content="Scott Manley's free-for-all BD Armory KSP competition." />
+    <link rel="canonical" href="https://runwayproject.herokuapp.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Flying Circus | Community | API" />
-    <meta property="og:description" content="Human-designed AI-piloted aircraft combat in an ongoing ranked tournament format." />
-    <meta property="og:url" content="https://conquertheair.com/home" />
-    <meta property="og:site_name" content="Flying Circus" />
-    <title>Flying Circus &dash; <%= content_for?(:html_title) ? yield(:html_title) : "" %></title>
+    <meta property="og:title" content="Scott Manley's Runway Project - Season 3" />
+    <meta property="og:description" content="Scott Manley's free-for-all BD Armory KSP competition." />
+    <meta property="og:url" content="https://runwayproject.herokuapp.com" />
+    <meta property="og:site_name" content="Runway Project API" />
+    <title>Runway Project &dash; <%= content_for?(:html_title) ? yield(:html_title) : "" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag :application %>
     <%= javascript_include_tag :application %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTB13GHB62"></script>
+   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTB13GHB62"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-TTB13GHB62');
-    </script>
+        gtag('config', 'G-XXXXXXXXX');
+    </script> -->
+    <!-- Replace this tag with a new one. -->
   </head>
 
   <body>
@@ -31,7 +32,7 @@
       <%= yield %>
     </div>
     <div class="sidebar">
-      <header>Flying Circus API</header>
+      <header>Runway Project API</header>
       <nav><%= yield(:nav) %></nav>
       <%= yield(:sidebar) %>
     </div>

@@ -2,11 +2,22 @@
 <section>
 <h1>Register</h1>
 <% if user_signed_in? -%>
-<p>You are already registered as <%= current_user.player.name %>!</p>
-<ul>
-<li><%= link_to 'View Player', player_path(current_user.player) %></li>
-<li><%= link_to 'Edit Player', edit_player_path(current_user.player) %></li>
+<% content_for(:nav) do %>
+<ul class="list-unstyled">
+  <li><%= link_to 'Home', home_path %></li>
+  <li><%= link_to 'Vessel Hangar', player_vessels_path(current_user.player.id) %></li>
 </ul>
+<% end -%>
+<% content_for(:sidebar) do %>
+<h4>Actions</h4>
+<ul class="list-unstyled">
+  <li><%= link_to 'View Player', player_path(current_user.player) %></li>
+  <li><%= link_to 'Edit Player', edit_player_path(current_user.player) %></li>
+</ul>
+<% end -%>
+<p>You are registered as <%= current_user.player.name %>!</p>
+<h2>Next Steps...</h2>
+<blockquote><p>Check out the Vessel Hangar to learn more!</p></blockquote>
 <% else -%>
 <p>
 Welcome to Runway Project, a bi-weekly, AI-driven KSP fighter jet competition put in motion by Scott “Munley” Manley!<br>To join, register below, and while you're at it, <a href="https://docs.google.com/document/d/1SsWF1RIg_sl1mRW_aNWpQaAyZCnb0oZ2uDHIjZEIpMk/edit?usp=sharing">read the introduction and rules.</a>
